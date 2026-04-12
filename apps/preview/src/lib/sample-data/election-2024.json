@@ -1,0 +1,20 @@
+{
+  "presidential": [
+    { "candidate": "Kamala Harris", "party": "Democratic", "votes": 75012341, "pct": 0.481 },
+    { "candidate": "Donald Trump", "party": "Republican", "votes": 77302892, "pct": 0.496 },
+    { "candidate": "Chase Oliver", "party": "Libertarian", "votes": 2048532, "pct": 0.013 },
+    { "candidate": "Jill Stein", "party": "Green", "votes": 1548210, "pct": 0.010 }
+  ],
+  "senate": [
+    { "candidate": "Bob Casey", "party": "Democratic", "votes": 3320145, "pct": 0.487 },
+    { "candidate": "Dave McCormick", "party": "Republican", "votes": 3395201, "pct": 0.498 },
+    { "candidate": "John Thomas", "party": "Libertarian", "votes": 102340, "pct": 0.015 }
+  ],
+  "historical_margins": [
+    { "year": 2008, "margin": 7.3 },
+    { "year": 2012, "margin": 3.9 },
+    { "year": 2016, "margin": -2.1 },
+    { "year": 2020, "margin": 4.5 },
+    { "year": 2024, "margin": -1.5 }
+  ]
+}

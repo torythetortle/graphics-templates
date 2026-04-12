@@ -1,0 +1,12 @@
+[
+  { "label": "California", "value": 39538, "group": "West" },
+  { "label": "Texas", "value": 29146, "group": "South" },
+  { "label": "Florida", "value": 21538, "group": "South" },
+  { "label": "New York", "value": 20201, "group": "Northeast" },
+  { "label": "Pennsylvania", "value": 13002, "group": "Northeast" },
+  { "label": "Illinois", "value": 12812, "group": "Midwest" },
+  { "label": "Ohio", "value": 11799, "group": "Midwest" },
+  { "label": "Georgia", "value": 10711, "group": "South" },
+  { "label": "North Carolina", "value": 10439, "group": "South" },
+  { "label": "Michigan", "value": 10077, "group": "Midwest" }
+]

@@ -1,0 +1,50 @@
+:root {
+  --font-chart: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --chart-bg: #ffffff;
+  --chart-text: #1a1a1a;
+  --chart-text-secondary: #666666;
+  --chart-axis: #888888;
+  --chart-grid: #e5e5e5;
+  --chart-annotation: #333333;
+
+  --color-democrat: #1473b8;
+  --color-republican: #c0392b;
+  --color-independent: #888888;
+  --color-up: #2ca25f;
+  --color-down: #c73a27;
+
+  --sidebar-width: 240px;
+  --surface: #f8f8f8;
+  --border: #e2e2e2;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --chart-bg: #1a1a1a;
+    --chart-text: #f0f0f0;
+    --chart-text-secondary: #999999;
+    --chart-axis: #777777;
+    --chart-grid: #333333;
+    --chart-annotation: #cccccc;
+    --surface: #111111;
+    --border: #333333;
+  }
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-chart);
+  background: var(--surface);
+  color: var(--chart-text);
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: inherit;
+}

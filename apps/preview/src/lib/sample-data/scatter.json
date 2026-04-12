@@ -1,0 +1,22 @@
+[
+  { "x": 67.2, "y": 38200, "label": "Mexico", "group": "Americas", "size": 128.9 },
+  { "x": 72.1, "y": 45600, "label": "Brazil", "group": "Americas", "size": 212.6 },
+  { "x": 78.5, "y": 63500, "label": "United States", "group": "Americas", "size": 331.0 },
+  { "x": 82.3, "y": 51800, "label": "Canada", "group": "Americas", "size": 38.0 },
+  { "x": 81.7, "y": 46200, "label": "United Kingdom", "group": "Europe", "size": 67.2 },
+  { "x": 83.4, "y": 50800, "label": "Germany", "group": "Europe", "size": 83.2 },
+  { "x": 82.7, "y": 42300, "label": "France", "group": "Europe", "size": 67.4 },
+  { "x": 84.8, "y": 35600, "label": "Spain", "group": "Europe", "size": 47.4 },
+  { "x": 83.5, "y": 34200, "label": "Italy", "group": "Europe", "size": 60.3 },
+  { "x": 84.6, "y": 42900, "label": "Japan", "group": "Asia", "size": 125.8 },
+  { "x": 83.5, "y": 31800, "label": "South Korea", "group": "Asia", "size": 51.7 },
+  { "x": 76.1, "y": 12500, "label": "China", "group": "Asia", "size": 1412.0 },
+  { "x": 69.7, "y": 7300, "label": "India", "group": "Asia", "size": 1408.0 },
+  { "x": 61.2, "y": 5100, "label": "Nigeria", "group": "Africa", "size": 211.4 },
+  { "x": 64.1, "y": 13500, "label": "South Africa", "group": "Africa", "size": 59.3 },
+  { "x": 66.7, "y": 12900, "label": "Egypt", "group": "Africa", "size": 102.3 },
+  { "x": 83.6, "y": 55200, "label": "Australia", "group": "Oceania", "size": 25.7 },
+  { "x": 82.3, "y": 42100, "label": "New Zealand", "group": "Oceania", "size": 5.1 },
+  { "x": 75.3, "y": 27700, "label": "Argentina", "group": "Americas", "size": 45.4 },
+  { "x": 76.6, "y": 15200, "label": "Colombia", "group": "Americas", "size": 51.3 }
+]

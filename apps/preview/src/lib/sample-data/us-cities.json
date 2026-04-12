@@ -1,0 +1,17 @@
+[
+  { "id": "nyc", "lat": 40.7128, "lon": -74.006, "value": 8336817, "label": "New York" },
+  { "id": "la", "lat": 34.0522, "lon": -118.2437, "value": 3979576, "label": "Los Angeles" },
+  { "id": "chi", "lat": 41.8781, "lon": -87.6298, "value": 2693976, "label": "Chicago" },
+  { "id": "hou", "lat": 29.7604, "lon": -95.3698, "value": 2320268, "label": "Houston" },
+  { "id": "phx", "lat": 33.4484, "lon": -112.074, "value": 1680992, "label": "Phoenix" },
+  { "id": "phi", "lat": 39.9526, "lon": -75.1652, "value": 1603797, "label": "Philadelphia" },
+  { "id": "sa", "lat": 29.4241, "lon": -98.4936, "value": 1547253, "label": "San Antonio" },
+  { "id": "sd", "lat": 32.7157, "lon": -117.1611, "value": 1423851, "label": "San Diego" },
+  { "id": "dal", "lat": 32.7767, "lon": -96.797, "value": 1343573, "label": "Dallas" },
+  { "id": "sj", "lat": 37.3382, "lon": -121.8863, "value": 1021795, "label": "San Jose" },
+  { "id": "atl", "lat": 33.749, "lon": -84.388, "value": 498715, "label": "Atlanta" },
+  { "id": "mia", "lat": 25.7617, "lon": -80.1918, "value": 442241, "label": "Miami" },
+  { "id": "sea", "lat": 47.6062, "lon": -122.3321, "value": 737015, "label": "Seattle" },
+  { "id": "den", "lat": 39.7392, "lon": -104.9903, "value": 715522, "label": "Denver" },
+  { "id": "bos", "lat": 42.3601, "lon": -71.0589, "value": 675647, "label": "Boston" }
+]

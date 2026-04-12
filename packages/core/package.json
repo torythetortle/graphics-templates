@@ -1,0 +1,39 @@
+{
+  "name": "@graphics-templates/core",
+  "version": "0.1.0",
+  "type": "module",
+  "exports": {
+    ".": "./src/index.ts",
+    "./color": "./src/color/index.ts",
+    "./scales": "./src/scales/index.ts",
+    "./a11y": "./src/a11y/index.ts",
+    "./data": "./src/data/index.ts",
+    "./responsive": "./src/responsive/index.ts",
+    "./format": "./src/format/index.ts"
+  },
+  "scripts": {
+    "build": "tsc",
+    "test": "vitest run",
+    "lint": "tsc --noEmit"
+  },
+  "dependencies": {
+    "d3-array": "^3.2.0",
+    "d3-format": "^3.1.0",
+    "d3-geo": "^3.1.0",
+    "d3-scale": "^4.0.0",
+    "d3-scale-chromatic": "^3.1.0",
+    "d3-shape": "^3.2.0",
+    "d3-time-format": "^4.1.0"
+  },
+  "devDependencies": {
+    "@types/d3-array": "^3.2.0",
+    "@types/d3-format": "^3.0.0",
+    "@types/d3-geo": "^3.1.0",
+    "@types/d3-scale": "^4.0.0",
+    "@types/d3-scale-chromatic": "^3.1.0",
+    "@types/d3-shape": "^3.1.0",
+    "@types/d3-time-format": "^4.0.0",
+    "typescript": "^5.8.0",
+    "vitest": "^3.1.0"
+  }
+}
