@@ -68,43 +68,43 @@
       <h3>Bubble Map</h3>
       <p>Proportional circles on geography</p>
     </a>
-    <a href="{base}/area" class="card">
+    <a href="{base}/area" class="card ready">
       <h3>Area Chart</h3>
       <p>Stacked areas, gradient fills</p>
     </a>
-    <a href="{base}/beeswarm" class="card">
+    <a href="{base}/beeswarm" class="card ready">
       <h3>Beeswarm</h3>
       <p>Distribution with collision detection</p>
     </a>
-    <a href="{base}/waffle" class="card">
+    <a href="{base}/waffle" class="card ready">
       <h3>Waffle Chart</h3>
       <p>Part-to-whole, icon grid</p>
     </a>
-    <a href="{base}/slope" class="card">
+    <a href="{base}/slope" class="card ready">
       <h3>Slope Chart</h3>
       <p>Before/after comparison</p>
     </a>
-    <a href="{base}/bump" class="card">
+    <a href="{base}/bump" class="card ready">
       <h3>Bump Chart</h3>
       <p>Rankings over time</p>
     </a>
-    <a href="{base}/heatmap" class="card">
+    <a href="{base}/heatmap" class="card ready">
       <h3>Heatmap</h3>
       <p>Calendar, grid patterns</p>
     </a>
-    <a href="{base}/sankey" class="card">
+    <a href="{base}/sankey" class="card ready">
       <h3>Sankey Diagram</h3>
       <p>Flows between categories</p>
     </a>
-    <a href="{base}/candlestick" class="card">
+    <a href="{base}/candlestick" class="card ready">
       <h3>Candlestick</h3>
       <p>OHLC, volume, moving averages</p>
     </a>
-    <a href="{base}/small-multiples" class="card">
+    <a href="{base}/small-multiples" class="card ready">
       <h3>Small Multiples</h3>
       <p>Faceted grid comparison</p>
     </a>
-    <a href="{base}/scrolly" class="card">
+    <a href="{base}/scrolly" class="card ready">
       <h3>Scrollytelling</h3>
       <p>Scroll-driven narrative</p>
     </a>

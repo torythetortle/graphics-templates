@@ -54,8 +54,15 @@
     </ul>
 
     <div class="sidebar-footer">
+      <span class="nav-section">Design System</span>
+      <a href="{base}/colors" class="nav-link" class:active={currentPath === '/colors'}>
+        Color Palettes
+      </a>
+      <a href="{base}/accessibility" class="nav-link" class:active={currentPath === '/accessibility'}>
+        Accessibility
+      </a>
       <a href="{base}/a11y-audit" class="nav-link" class:active={currentPath === '/a11y-audit'}>
-        Accessibility Audit
+        Audit Tool
       </a>
     </div>
   </nav>
@@ -99,6 +106,16 @@
     margin: 0;
     padding: 0;
     flex: 1;
+  }
+
+  .nav-section {
+    display: block;
+    padding: 0.375rem 1.25rem 0.125rem;
+    font-size: 0.625rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--chart-text-secondary);
   }
 
   .nav-link {
