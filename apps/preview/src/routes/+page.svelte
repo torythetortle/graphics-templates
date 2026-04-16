@@ -7,106 +7,97 @@
   <title>Graphics Templates</title>
 </svelte:head>
 
-<div class="hero">
+<section class="intro">
   <h1>Graphics Templates</h1>
   <p class="tagline">
     Accessible-by-default chart components for newsroom graphics.
     Built with Svelte 5 and D3.
   </p>
 
-  <div class="features">
-    <div class="feature">
-      <span class="feature-icon" aria-hidden="true">a11y</span>
-      <div>
-        <strong>Accessibility First</strong>
-        <p>Screen reader descriptions, keyboard navigation, data table alternatives, and skip links on every chart.</p>
-      </div>
-    </div>
-    <div class="feature">
-      <span class="feature-icon" aria-hidden="true">css</span>
-      <div>
-        <strong>Responsive &amp; Print-Ready</strong>
-        <p>Auto-resizing via ResizeObserver. Mobile-first breakpoints. <code>@media print</code> stylesheets with dash patterns for grayscale.</p>
-      </div>
-    </div>
-    <div class="feature">
-      <span class="feature-icon" aria-hidden="true">svg</span>
-      <div>
-        <strong>Deadline Friendly</strong>
-        <p>Drop in data, set a title, publish. Every component works out of the box with sensible defaults.</p>
-      </div>
-    </div>
+  <div class="bio">
+    <p>
+      Most newsroom chart templates ship without real accessibility. This library
+      bakes in screen reader support, keyboard navigation, data table alternatives,
+      and colorblind-safe palettes as defaults — not afterthoughts.
+    </p>
+    <p>
+      18 chart types covering the full range of data journalism needs: line and
+      bar charts, choropleth maps, election results, beeswarms, sankey diagrams,
+      candlesticks, scrollytelling scaffolds, and more.
+    </p>
+    <p>
+      Drop in data, set a title, publish. Every component is responsive,
+      print-ready, and keyboard navigable out of the box.
+    </p>
   </div>
-</div>
+</section>
 
 <section class="section">
-  <h2 class="section-title">Chart Components</h2>
-  <p class="section-desc">18 chart types covering the full range of newsroom graphics needs.</p>
-
+  <h2 class="section-title">Charts</h2>
   <div class="grid">
-    <a href="{base}/line" class="card ready">
-      <h3>Line Chart</h3>
+    <a href="{base}/line" class="card">
+      <h3>Line</h3>
       <p>Time series, multi-series, annotations, dash patterns</p>
     </a>
-    <a href="{base}/bar" class="card ready">
-      <h3>Bar Chart</h3>
+    <a href="{base}/bar" class="card">
+      <h3>Bar</h3>
       <p>Vertical, horizontal, grouped, stacked, value labels</p>
     </a>
-    <a href="{base}/scatter" class="card ready">
-      <h3>Scatter Plot</h3>
+    <a href="{base}/scatter" class="card">
+      <h3>Scatter</h3>
       <p>Correlation, size encoding, group coloring</p>
     </a>
-    <a href="{base}/election" class="card ready">
+    <a href="{base}/area" class="card">
+      <h3>Area</h3>
+      <p>Stacked areas, gradient fills, multi-series</p>
+    </a>
+    <a href="{base}/election" class="card">
       <h3>Election Results</h3>
       <p>Candidates, margins, party colors, precincts reporting</p>
     </a>
-    <a href="{base}/choropleth" class="card ready">
+    <a href="{base}/choropleth" class="card">
       <h3>Choropleth</h3>
-      <p>US states, counties, world countries, sequential &amp; diverging</p>
+      <p>US states, counties, world countries</p>
     </a>
-    <a href="{base}/bubble-map" class="card ready">
+    <a href="{base}/bubble-map" class="card">
       <h3>Bubble Map</h3>
       <p>Proportional circles on geography</p>
     </a>
-    <a href="{base}/area" class="card ready">
-      <h3>Area Chart</h3>
-      <p>Stacked areas, gradient fills</p>
-    </a>
-    <a href="{base}/beeswarm" class="card ready">
+    <a href="{base}/beeswarm" class="card">
       <h3>Beeswarm</h3>
       <p>Distribution with collision detection</p>
     </a>
-    <a href="{base}/waffle" class="card ready">
-      <h3>Waffle Chart</h3>
-      <p>Part-to-whole, icon grid</p>
+    <a href="{base}/waffle" class="card">
+      <h3>Waffle</h3>
+      <p>Part-to-whole grid, percentage labels</p>
     </a>
-    <a href="{base}/slope" class="card ready">
-      <h3>Slope Chart</h3>
-      <p>Before/after comparison</p>
+    <a href="{base}/slope" class="card">
+      <h3>Slope</h3>
+      <p>Before/after comparison across two time points</p>
     </a>
-    <a href="{base}/bump" class="card ready">
-      <h3>Bump Chart</h3>
-      <p>Rankings over time</p>
+    <a href="{base}/bump" class="card">
+      <h3>Bump</h3>
+      <p>Rankings over time with dash patterns</p>
     </a>
-    <a href="{base}/heatmap" class="card ready">
+    <a href="{base}/heatmap" class="card">
       <h3>Heatmap</h3>
-      <p>Calendar, grid patterns</p>
+      <p>Calendar grids, time × category intensity</p>
     </a>
-    <a href="{base}/sankey" class="card ready">
-      <h3>Sankey Diagram</h3>
+    <a href="{base}/sankey" class="card">
+      <h3>Sankey</h3>
       <p>Flows between categories</p>
     </a>
-    <a href="{base}/candlestick" class="card ready">
+    <a href="{base}/candlestick" class="card">
       <h3>Candlestick</h3>
-      <p>OHLC, volume, moving averages</p>
+      <p>OHLC bars, wicks, up/down colors</p>
     </a>
-    <a href="{base}/small-multiples" class="card ready">
+    <a href="{base}/small-multiples" class="card">
       <h3>Small Multiples</h3>
-      <p>Faceted grid comparison</p>
+      <p>Faceted grid of any chart type</p>
     </a>
-    <a href="{base}/scrolly" class="card ready">
+    <a href="{base}/scrolly" class="card">
       <h3>Scrollytelling</h3>
-      <p>Scroll-driven narrative</p>
+      <p>Sticky panels with IntersectionObserver</p>
     </a>
   </div>
 </section>
@@ -114,7 +105,7 @@
 <section class="section">
   <h2 class="section-title">Design System</h2>
   <div class="grid grid-2">
-    <a href="{base}/colors" class="card system-card">
+    <a href="{base}/colors" class="card card-big">
       <h3>Color Palettes</h3>
       <p>15 named palettes — categorical, sequential, diverging, politics, finance. Colorblind-safe variants included.</p>
       <div class="palette-preview" aria-hidden="true">
@@ -123,9 +114,9 @@
         {/each}
       </div>
     </a>
-    <a href="{base}/accessibility" class="card system-card">
+    <a href="{base}/accessibility" class="card card-big">
       <h3>Accessibility</h3>
-      <p>Every chart ships with ARIA roles, auto-generated descriptions, keyboard navigation, data table alternatives, and <code>prefers-reduced-motion</code> support.</p>
+      <p>Every chart ships with ARIA roles, auto-generated descriptions, keyboard navigation, data table alternatives, and prefers-reduced-motion support.</p>
     </a>
   </div>
 </section>
@@ -145,8 +136,9 @@
   sourceLabel="Bureau of Labor Statistics"
 /&gt;</code></pre>
   </div>
-  <p class="code-note">
-    That's it. Responsive sizing, keyboard navigation, screen reader support, print styles, and a visually-hidden data table are all included automatically.
+  <p class="note">
+    Responsive sizing, keyboard navigation, screen reader support, print styles,
+    and a visually-hidden data table are included automatically.
   </p>
 </section>
 
@@ -164,82 +156,47 @@
 </section>
 
 <style>
-  .hero {
-    margin-bottom: 3rem;
+  .intro {
+    margin-bottom: var(--space-xl);
   }
 
   h1 {
     margin: 0 0 0.5rem;
-    font-size: 2rem;
-    font-weight: 800;
+    font-size: 2.25rem;
     letter-spacing: -0.02em;
   }
 
   .tagline {
-    margin: 0 0 2rem;
-    color: var(--chart-text-secondary);
+    margin: 0 0 1.5rem;
+    color: var(--color-text-muted);
     font-size: 1.0625rem;
-    max-width: 520px;
+    font-family: var(--font-mono);
+    max-width: 600px;
     line-height: 1.6;
   }
 
-  .features {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-  }
-
-  .feature {
-    display: flex;
-    gap: 0.75rem;
-    align-items: flex-start;
-  }
-
-  .feature-icon {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 36px;
-    height: 36px;
-    border-radius: 6px;
-    background: var(--chart-bg);
-    border: 1px solid var(--border);
-    font-size: 0.625rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-    color: var(--chart-text-secondary);
-    flex-shrink: 0;
-  }
-
-  .feature strong {
-    display: block;
+  .bio p {
+    max-width: 680px;
+    line-height: 1.75;
+    margin: 0 0 1rem;
+    color: var(--color-text);
     font-size: 0.9375rem;
-    margin-bottom: 0.125rem;
-  }
-
-  .feature p {
-    margin: 0;
-    font-size: 0.8125rem;
-    color: var(--chart-text-secondary);
-    line-height: 1.5;
-    max-width: 420px;
   }
 
   .section {
-    margin-bottom: 3rem;
+    margin-bottom: var(--space-xl);
   }
 
   .section-title {
-    margin: 0 0 0.25rem;
-    font-size: 1.125rem;
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
     font-weight: 700;
-  }
-
-  .section-desc {
-    margin: 0 0 1.25rem;
-    font-size: 0.875rem;
-    color: var(--chart-text-secondary);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--color-text-muted);
+    margin: 0 0 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(--color-border);
   }
 
   .grid {
@@ -254,55 +211,45 @@
 
   .card {
     display: block;
-    padding: 1rem;
-    background: var(--chart-bg);
-    border: 1px solid var(--border);
+    padding: 1rem 1.125rem;
+    background: var(--color-bg-subtle);
+    border: 1px solid var(--color-border);
     border-radius: 6px;
     text-decoration: none;
-    transition: border-color 0.15s, box-shadow 0.15s;
-    opacity: 0.55;
-  }
-
-  .card.ready {
-    opacity: 1;
+    transition: border-color 0.15s, transform 0.15s;
   }
 
   .card:hover {
-    border-color: var(--chart-axis);
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+    border-color: var(--color-accent);
+    transform: translateY(-1px);
   }
 
   .card h3 {
     margin: 0 0 0.25rem;
-    font-size: 0.875rem;
-    font-weight: 600;
+    font-size: 0.9375rem;
+    font-weight: 500;
+    color: var(--color-text-bright);
+    font-family: var(--font-mono);
   }
 
   .card p {
     margin: 0;
-    font-size: 0.75rem;
-    color: var(--chart-text-secondary);
-    line-height: 1.4;
-  }
-
-  .card code {
-    font-size: 0.6875rem;
-    background: var(--surface);
-    padding: 0.1em 0.3em;
-    border-radius: 3px;
-  }
-
-  .system-card {
-    opacity: 1;
-    padding: 1.25rem;
-  }
-
-  .system-card h3 {
-    font-size: 0.9375rem;
-  }
-
-  .system-card p {
     font-size: 0.8125rem;
+    color: var(--color-text-muted);
+    line-height: 1.5;
+    font-family: var(--font-body);
+  }
+
+  .card-big {
+    padding: 1.25rem 1.5rem;
+  }
+
+  .card-big h3 {
+    font-size: 1rem;
+  }
+
+  .card-big p {
+    font-size: 0.875rem;
   }
 
   .palette-preview {
@@ -312,14 +259,14 @@
   }
 
   .palette-preview span {
-    width: 20px;
-    height: 20px;
+    width: 22px;
+    height: 22px;
     border-radius: 3px;
   }
 
   .code-block {
-    background: var(--chart-bg);
-    border: 1px solid var(--border);
+    background: var(--color-bg-subtle);
+    border: 1px solid var(--color-border);
     border-radius: 6px;
     padding: 1.25rem;
     overflow-x: auto;
@@ -330,18 +277,19 @@
   }
 
   .code-block code {
-    font-family: 'SF Mono', 'Fira Code', 'Fira Mono', Menlo, monospace;
+    font-family: var(--font-mono);
     font-size: 0.8125rem;
-    line-height: 1.6;
-    color: var(--chart-text);
+    line-height: 1.7;
+    color: var(--color-text);
   }
 
-  .code-note {
+  .note {
     margin: 0.75rem 0 0;
-    font-size: 0.8125rem;
-    color: var(--chart-text-secondary);
-    line-height: 1.5;
-    max-width: 580px;
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    color: var(--color-text-muted);
+    line-height: 1.6;
+    max-width: 620px;
   }
 
   .tech-list {
@@ -353,10 +301,11 @@
   .tech {
     display: inline-block;
     padding: 0.375rem 0.75rem;
-    background: var(--chart-bg);
-    border: 1px solid var(--border);
+    background: var(--color-bg-subtle);
+    border: 1px solid var(--color-border);
     border-radius: 100px;
-    font-size: 0.8125rem;
-    font-weight: 500;
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    color: var(--color-text-muted);
   }
 </style>

@@ -2,6 +2,7 @@
   import '../app.css';
   import { page } from '$app/stores';
   import { base } from '$app/paths';
+  import HexagonBg from '$lib/HexagonBg.svelte';
   import type { Snippet } from 'svelte';
 
   interface Props {
@@ -11,194 +12,284 @@
   let { children }: Props = $props();
 
   const charts = [
-    { href: '/line', label: 'Line Chart', phase: 2 },
-    { href: '/bar', label: 'Bar Chart', phase: 2 },
-    { href: '/scatter', label: 'Scatter Plot', phase: 2 },
-    { href: '/area', label: 'Area Chart', phase: 5 },
-    { href: '/election', label: 'Election Results', phase: 3 },
-    { href: '/choropleth', label: 'Choropleth', phase: 4 },
-    { href: '/bubble-map', label: 'Bubble Map', phase: 4 },
-    { href: '/beeswarm', label: 'Beeswarm', phase: 5 },
-    { href: '/waffle', label: 'Waffle Chart', phase: 5 },
-    { href: '/slope', label: 'Slope Chart', phase: 5 },
-    { href: '/bump', label: 'Bump Chart', phase: 6 },
-    { href: '/heatmap', label: 'Heatmap', phase: 6 },
-    { href: '/sankey', label: 'Sankey Diagram', phase: 6 },
-    { href: '/candlestick', label: 'Candlestick', phase: 6 },
-    { href: '/small-multiples', label: 'Small Multiples', phase: 7 },
-    { href: '/scrolly', label: 'Scrollytelling', phase: 7 },
+    { href: '/line', label: 'Line' },
+    { href: '/bar', label: 'Bar' },
+    { href: '/scatter', label: 'Scatter' },
+    { href: '/area', label: 'Area' },
+    { href: '/election', label: 'Election' },
+    { href: '/choropleth', label: 'Choropleth' },
+    { href: '/bubble-map', label: 'Bubble Map' },
+    { href: '/beeswarm', label: 'Beeswarm' },
+    { href: '/waffle', label: 'Waffle' },
+    { href: '/slope', label: 'Slope' },
+    { href: '/bump', label: 'Bump' },
+    { href: '/heatmap', label: 'Heatmap' },
+    { href: '/sankey', label: 'Sankey' },
+    { href: '/candlestick', label: 'Candlestick' },
+    { href: '/small-multiples', label: 'Small Multiples' },
+    { href: '/scrolly', label: 'Scrollytelling' },
+  ];
+
+  const docs = [
+    { href: '/colors', label: 'Colors' },
+    { href: '/accessibility', label: 'Accessibility' },
   ];
 
   const currentPath = $derived($page.url.pathname.replace(base, ''));
 </script>
 
-<div class="layout">
-  <nav class="sidebar" aria-label="Chart types">
-    <a href="{base}/" class="sidebar-title">
-      <strong>Graphics Templates</strong>
-    </a>
+<HexagonBg />
 
-    <ul class="nav-list">
-      {#each charts as chart}
-        <li>
-          <a
-            href="{base}{chart.href}"
-            class="nav-link"
-            class:active={currentPath === chart.href}
-            aria-current={currentPath === chart.href ? 'page' : undefined}
-          >
-            {chart.label}
-          </a>
-        </li>
-      {/each}
-    </ul>
-
-    <div class="sidebar-footer">
-      <span class="nav-section">Design System</span>
-      <a href="{base}/colors" class="nav-link" class:active={currentPath === '/colors'}>
-        Color Palettes
-      </a>
-      <a href="{base}/accessibility" class="nav-link" class:active={currentPath === '/accessibility'}>
-        Accessibility
-      </a>
-      <a href="{base}/a11y-audit" class="nav-link" class:active={currentPath === '/a11y-audit'}>
-        Audit Tool
-      </a>
+<div class="shell">
+  <header class="header">
+    <div class="container">
+      <nav class="nav" aria-label="Main navigation">
+        <a href="{base}/" class="name">Graphics Templates</a>
+        <div class="links">
+          <a href="{base}/" class:active={currentPath === '' || currentPath === '/'}>Overview</a>
+          <a href="{base}/colors" class:active={currentPath === '/colors'}>Colors</a>
+          <a href="{base}/accessibility" class:active={currentPath === '/accessibility'}>Accessibility</a>
+          <a href="https://github.com/torythetortle/graphics-templates" target="_blank" rel="noopener noreferrer">GitHub</a>
+        </div>
+      </nav>
     </div>
-  </nav>
+  </header>
 
-  <main class="content">
-    {@render children()}
-  </main>
+  <div class="body">
+    <div class="container">
+      <div class="layout">
+        <aside class="sidebar" aria-label="Chart index">
+          <div class="nav-section">Charts</div>
+          <ul class="nav-list">
+            {#each charts as chart}
+              <li>
+                <a
+                  href="{base}{chart.href}"
+                  class="nav-link"
+                  class:active={currentPath === chart.href}
+                  aria-current={currentPath === chart.href ? 'page' : undefined}
+                >
+                  {chart.label}
+                </a>
+              </li>
+            {/each}
+          </ul>
+        </aside>
+
+        <main class="content">
+          {@render children()}
+        </main>
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+      <p>
+        Built by Tory Lysik. Accessible-by-default chart components for newsroom graphics.
+        Source on <a href="https://github.com/torythetortle/graphics-templates" target="_blank" rel="noopener noreferrer">GitHub</a>.
+      </p>
+    </div>
+  </footer>
 </div>
 
 <style>
-  .layout {
-    display: flex;
+  .shell {
+    position: relative;
+    z-index: 1;
     min-height: 100vh;
-  }
-
-  .sidebar {
-    width: var(--sidebar-width);
-    flex-shrink: 0;
-    background: var(--chart-bg);
-    border-right: 1px solid var(--border);
-    padding: 1.5rem 0;
-    position: sticky;
-    top: 0;
-    height: 100vh;
-    overflow-y: auto;
     display: flex;
     flex-direction: column;
   }
 
-  .sidebar-title {
-    display: block;
-    padding: 0 1.25rem 1rem;
-    font-size: 0.9375rem;
-    text-decoration: none;
-    border-bottom: 1px solid var(--border);
-    margin-bottom: 0.75rem;
+  .container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 var(--space-xl);
+  }
+
+  .header {
+    padding: var(--space-xl) 0 var(--space-md);
+  }
+
+  .nav {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-sm);
+  }
+
+  .name {
+    font-family: var(--font-mono);
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--color-text-bright);
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+  }
+
+  .name:hover {
+    color: var(--color-text-bright);
+  }
+
+  .links {
+    display: flex;
+    gap: 1.5rem;
+    font-family: var(--font-mono);
+    font-size: 0.8125rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
+  .links a {
+    color: var(--color-text-muted);
+    text-decoration: underline;
+    padding: 0.25rem 0;
+  }
+
+  .links a:hover {
+    color: var(--color-text-bright);
+  }
+
+  .links a.active {
+    color: var(--color-text-bright);
+    font-weight: 700;
+  }
+
+  .body {
+    flex: 1;
+    padding-top: var(--space-lg);
+  }
+
+  .layout {
+    display: grid;
+    grid-template-columns: var(--sidebar-width) 1fr;
+    gap: var(--space-xl);
+  }
+
+  .sidebar {
+    position: sticky;
+    top: var(--space-lg);
+    align-self: start;
+    max-height: calc(100vh - var(--space-xl));
+    overflow-y: auto;
+  }
+
+  .nav-section {
+    font-family: var(--font-mono);
+    font-size: 0.6875rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--color-text-muted);
+    padding: 0.25rem 0 0.5rem;
+    border-bottom: 1px solid var(--color-border);
+    margin-bottom: 0.5rem;
   }
 
   .nav-list {
     list-style: none;
     margin: 0;
     padding: 0;
-    flex: 1;
   }
 
-  .nav-section {
-    display: block;
-    padding: 0.375rem 1.25rem 0.125rem;
-    font-size: 0.625rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.06em;
-    color: var(--chart-text-secondary);
+  .nav-list li {
+    margin: 0;
   }
 
   .nav-link {
     display: block;
-    padding: 0.375rem 1.25rem;
+    padding: 0.3125rem 0;
+    font-family: var(--font-mono);
     font-size: 0.8125rem;
+    color: var(--color-text-muted);
     text-decoration: none;
-    color: var(--chart-text-secondary);
-    border-left: 3px solid transparent;
-    transition: background 0.1s;
+    border-left: 2px solid transparent;
+    padding-left: 0.625rem;
+    margin-left: -0.625rem;
+    transition: color 0.15s, border-color 0.15s;
   }
 
   .nav-link:hover {
-    background: var(--surface);
-    color: var(--chart-text);
+    color: var(--color-text-bright);
   }
 
   .nav-link.active {
-    color: var(--chart-text);
-    border-left-color: var(--chart-text);
-    font-weight: 600;
-  }
-
-  .sidebar-footer {
-    border-top: 1px solid var(--border);
-    padding-top: 0.75rem;
-    margin-top: 0.75rem;
+    color: var(--color-accent);
+    border-left-color: var(--color-accent);
+    font-weight: 500;
   }
 
   .content {
-    flex: 1;
-    padding: 2rem 2.5rem;
-    max-width: 960px;
+    min-width: 0;
   }
 
-  @media (max-width: 768px) {
+  .footer {
+    padding: var(--space-xl) 0 var(--space-lg);
+    border-top: 1px solid var(--color-border);
+    margin-top: var(--space-xl);
+  }
+
+  .footer p {
+    margin: 0;
+    font-family: var(--font-mono);
+    font-size: 0.8125rem;
+    color: var(--color-text-muted);
+  }
+
+  .footer a {
+    color: var(--color-text-muted);
+    text-decoration: underline;
+  }
+
+  .footer a:hover {
+    color: var(--color-text-bright);
+  }
+
+  @media (max-width: 900px) {
     .layout {
-      flex-direction: column;
+      grid-template-columns: 1fr;
+      gap: var(--space-md);
     }
 
     .sidebar {
-      width: 100%;
-      height: auto;
       position: static;
-      flex-direction: row;
-      flex-wrap: wrap;
-      padding: 0.75rem;
-      gap: 0.25rem;
-    }
-
-    .sidebar-title {
-      width: 100%;
-      border-bottom: none;
-      padding: 0 0 0.5rem;
-      margin-bottom: 0;
+      max-height: none;
     }
 
     .nav-list {
       display: flex;
       flex-wrap: wrap;
-      gap: 0.25rem;
+      gap: 0.25rem 1rem;
     }
 
     .nav-link {
       border-left: none;
-      border-radius: 4px;
-      padding: 0.25rem 0.625rem;
+      padding-left: 0;
+      margin-left: 0;
     }
 
     .nav-link.active {
-      background: var(--chart-text);
-      color: var(--chart-bg);
+      border-left: none;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .header {
+      padding: var(--space-lg) 0 var(--space-sm);
     }
 
-    .sidebar-footer {
-      width: 100%;
-      border-top: none;
-      margin-top: 0;
-      padding-top: 0;
+    .container {
+      padding: 0 var(--space-md);
     }
 
-    .content {
-      padding: 1.25rem;
+    .name {
+      font-size: 1.5rem;
+    }
+
+    .links {
+      gap: 0.75rem;
+      flex-wrap: wrap;
+      font-size: 0.75rem;
     }
   }
 </style>
